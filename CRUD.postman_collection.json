@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "46afaf0e-59b7-4f57-85ad-c8c67518ddc8",
+		"name": "CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14432135"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Book - 2\",\r\n    \"author\": \"Author - 2\",\r\n    \"description\": \"tut tut tut\",\r\n    \"image\": \"https://assets-global.website-files.com/5acbbb3b5edee835670db6d1/5b1f0cdc881d8b8498a17a67_Books7.jpg\",\r\n    \"publisher\": \"tut tut tut\",\r\n    \"price\": 400\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/addBook",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"addBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/getAllBooks",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"getAllBooks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Book - 1 2 3 4 5\",\r\n    \"author\": \"Author - 1\",\r\n    \"description\": \"tut tut tut\",\r\n    \"image\": \"https://assets-global.website-files.com/5acbbb3b5edee835670db6d1/5b1f0cdc881d8b8498a17a67_Books7.jpg\",\r\n    \"publisher\": \"tut tut tut\",\r\n    \"price\": 600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/updateBook/63e7b522ca893d69f63de04c",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"updateBook",
+						"63e7b522ca893d69f63de04c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/deleteBook/63e7b522ca893d69f63de04c",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"deleteBook",
+						"63e7b522ca893d69f63de04c"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseURL",
+			"value": "http://localhost:5000/api/v1/",
+			"type": "string"
+		}
+	]
+}

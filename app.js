@@ -41,7 +41,7 @@ mongoose.connect(URI,OPTION,(error)=>{
 })
 
 // Routing Implement
-app.use("/api/v1",router)
+app.use("/api/v1", router);
 
 // Add React Front End Routing
 app.get('*',function (req,res) {
