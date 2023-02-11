@@ -4,10 +4,10 @@ const Schema = mongoose.Schema({
     author: {type: String, required: true},
     description: {type: String, required: true},
     image: {type: String, required: true},
-    published_date: {type: Date, default: Date.now()},
+    publishedDate: {type: Date, default: Date.now()},
     publisher: {type: String, required: true},
-    updated_date: {type: Date, default: Date.now()},
-    price: {type: Number, required: true},
+    updatedDate: {type: Date, default: Date.now()},
+    price: {type: String, required: true},
 }, {versionKey: false});
 
 const Book = mongoose.model('books', Schema);

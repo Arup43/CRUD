@@ -23,6 +23,17 @@ exports.getAllBooks = (req, res) => {
     });
 };
 
+//Get a book by id
+exports.getBookById = (req, res) => {
+    Book.findOne({_id: req.params.id}, (err, data) => {
+        if(err) {
+            res.status(400).json({status: "failed", data: err})
+        } else {
+            res.status(200).json({status: "success", data: data})
+        }
+    })
+};
+
 //Update a book
 exports.updateBook = (req, res) => {
     const id = req.params.id;
