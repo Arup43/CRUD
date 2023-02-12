@@ -48,3 +48,26 @@ body{
     width: auto;
     height: 70px;
 }
+
+.link-text{
+    text-decoration: none;
+    color: #636363;
+    font-size: large;
+    background-color: #cef7ff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.nav{
+    box-shadow: #b3b3b3 0px 0px 10px 0px;
+    margin-bottom: 100px;
+}
+
+.book-list{
+    box-shadow: #b3b3b3 0px 0px 20px 0px;
+    border-radius: 10px;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}

@@ -36,7 +36,7 @@ export default function ListTable() {
 
   if (books.length === 0) {
     return (
-      <div className='container text-center'>
+      <div>
         <FullScreenLoader />
         <ToastContainer />
       </div>
@@ -44,7 +44,7 @@ export default function ListTable() {
   } else {
     return (
       <div className='container'>
-        <table className='table table-bordered'>
+        <table className='table table-bordered book-list'>
           <thead>
             <tr>
               <th>Image</th>
@@ -67,8 +67,10 @@ export default function ListTable() {
                   <td>{book.publisher}</td>
                   <td>{book.price}</td>
                   <td>
-                    <button onClick={deleteBookItem.bind(this, book._id)} className='btn btn-danger me-2'>Delete</button>
-                    <button onClick={updateBookItem.bind(this, book._id)} className='btn btn-primary'>Update</button>
+                    <div className="btn-group" role="group" aria-label="Basic example">
+                      <button onClick={deleteBookItem.bind(this, book._id)} type="button" className="btn btn-danger"><i class="fa-solid fa-trash-can"></i> Delete</button>
+                      <button onClick={updateBookItem.bind(this, book._id)} type="button" className="btn btn-primary px-3"><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+                    </div>
                   </td>
                 </tr>
               })
